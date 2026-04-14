@@ -1,7 +1,6 @@
 import webbrowser
 import random
 import socket
-import winreg
 
 def start_server(port):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -21,8 +20,6 @@ def start_server(port):
                 print("Received command:", command)
 
 
-
-# List of tuples containing URLs and their corresponding numbers
 urls = [
     ("https://www.rizz.com", 1),
     ("https://www.youtube.com", 2),
@@ -38,34 +35,32 @@ urls = [
     ("https://clicktheredbutton.com",12),
     ("https://www.youtube.com/watch?v=6QtuIymUzRU&t=1404s",13),
     ("https://www.youtube.com/watch?v=2lI9_lAXG_k",14),
+    ("https://fart.com",15),
 ]
 
-# "C:\\Users\\David\\AppData\\Local\\Programs\\Opera GX\\launcher.exe"
-
-# Register the Opera GX browser
+# Register the browser
 webbrowser.register('opera', None, webbrowser.BackgroundBrowser("C:\\Users\\David\\AppData\\Local\\Programs\\Opera GX\\launcher.exe"))
 print("Browser registered successfully.")
 
-# Attempt to get the Opera GX browser
+
 browser = webbrowser.get('opera')
 if browser is not None:
     print("Using Opera GX browser.")
 else:
     print("Failed to get Opera GX browser.")
 
-
 def execute_command(command):
     if command == "youtube":
-        webbrowser.open(urls[1][0])  # Open the YouTube URL
+        webbrowser.open(urls[1][0])  
     elif command == "steam":
-        webbrowser.open(urls[8][0])  # Open the Steam URL
+        webbrowser.open(urls[8][0])  
     elif command == "reddit":
-        webbrowser.open(urls[4][0])  # Open the Reddit URL
+        webbrowser.open(urls[4][0]) 
     elif command == "random video":
-        # Select a random video URL from indices 10, 11, and 12
+        # Select a random video 
         webbrowser.open(random.choice([urls[10][0], urls[11][0], urls[12][0]]))
     elif command == "weavesilk" or command == "weave silk":
-        webbrowser.open(urls[6][0])  # Open the Weavesilk URL
+        webbrowser.open(urls[6][0]) 
     elif command == "x":
         webbrowser.open(urls[3][0])
     elif command == "time":
@@ -76,6 +71,8 @@ def execute_command(command):
         webbrowser.open(urls[7][0])
     elif command == "rizz" or "riz":
         webbrowser.open(urls[0][0])
+    elif command == "fart":
+        webbrowser.open(urls[14][0])
     else:
         webbrowser.open("https://" + command + ".com")
 
