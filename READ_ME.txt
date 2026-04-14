@@ -1,6 +1,6 @@
 Hello, this is BigProgram v1!
 
-Commands: As this program uses speech to text(and to speech) you will needs ALL the Commands.
+Commands: As this program uses speech to text(and to speech again) you will need ALL the Commands.
 
 1.Mouse up/left/right/down
     These do what you expect.
